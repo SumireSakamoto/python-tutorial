@@ -47,11 +47,11 @@ class Employee:
         if(self.evaluation == 0):
             print('評価(1~3)が入力されていないので、bonusを算出できません。')
         elif((self.evaluation == 1) and (self.basic_salary != 0)):
-            self.bonus = self.basic_sarary * 1.5
+            self.bonus = self.basic_salary * 1.5
         elif((self.evaluation == 2) and (self.basic_salary != 0)):
-            self.bonus = self.basic_sarary * 3
+            self.bonus = self.basic_salary * 3
         elif((self.evaluation == 3) and (self.basic_salary != 0)):
-            self.bonus = self.basic_sarary * 5
+            self.bonus = self.basic_salary * 5
         else:
             print('エラー：ボーナスの計算に失敗しました。')
     def save(self, filename):
@@ -72,3 +72,4 @@ class Employee:
             print('社員番号：' + str(self.employee_number) + '氏名：' + self.employee_name + 'の従業員データを保存しました。')
         except:
             print('save error')
+            
