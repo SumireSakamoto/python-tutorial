@@ -72,4 +72,9 @@ class Employee:
             print('社員番号：' + str(self.employee_number) + '氏名：' + self.employee_name + 'の従業員データを保存しました。')
         except:
             print('save error')
-            
+
+emp = Employee(12345, '会社花子')
+emp.set_employee_data(29, 2, '新規事業開発本部', 250000, 2)
+emp.calc_bonus()
+emp.show_employee_data()
+emp.save('12345.txt')
