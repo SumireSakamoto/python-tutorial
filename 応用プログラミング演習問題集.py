@@ -164,17 +164,17 @@ print('積は',x*y)
 # 第4章
 # 例4-1
 if 0<10:
-    print 'OK'
+    print ('OK')
 
 # 例4-2:
-x = input('値を入れてください。ある数字と等しいか判定します')
+x = int(input('値を入れてください。ある数字と等しいか判定します'))
 if x+25000 == 3500*9:
     print('OK')
 else:
     print('Booo')
 
 # 例4-3
-x = input('値を入れてください')
+x = int(input('値を入れてください'))
 if x > 0:
     print('positive')
     if x > 100:
@@ -187,30 +187,30 @@ else:
     print('negative')
 
 # 4-1 (1)
-x = input('値を入れてください')
+x = int(input('値を入れてください'))
 if x == 0:
     print('zero')
 
 # 4-1 (2)
-x = input('値を入れてください')
+x = int(input('値を入れてください'))
 if x >= 100:
     print('OK')
 
 # 4-1 (3)
-x = input('値を入れてください')
+x = int(input('値を入れてください'))
 if x > 0:
     print('positive')
 else:
     print('negative')
 
 # 4-1 (4)
-x = input('値を入れてください')
-y = input('値を入れてください')
+x = int(input('値を入れてください'))
+y = int(input('値を入れてください'))
 if x == y:
     print('equal')
 
 # 4-2 (1)
-x = input('値を入れてください')
+x = int(input('値を入れてください'))
 if x == 10:
     print('x=10')
 elif x > 10:
@@ -219,7 +219,7 @@ else:
     print('x<10')
 
 # 4-2 (2)
-x = input('値を入れてください')
+x = int(input('値を入れてください'))
 if x == 1:
     print('x=1')
 elif x == 2:
@@ -228,7 +228,7 @@ else:
     print('etc')
 
 # 4-2 (3)
-x = input('値を入れてください')
+x = int(input('値を入れてください'))
 if x < 0:
     if x == 0:
         print('zero')
@@ -243,15 +243,15 @@ elif x > 0:
 
 # 4-3
 print('値を2つ入力してください。')
-x = input('一つ目')
-y = input('二つ目')
+x = int(input('一つ目'))
+y = int(input('二つ目'))
 if x >= y:
     print(x-y)
 else:
     print('マイナスになります')
 
 # 4-4
-x = input('1~3の値を入れてください')
+x = int(input('1~3の値を入れてください'))
 if x == 1:
     print('(。-∀-)')
 elif x == 2:
@@ -267,22 +267,22 @@ else:
     print('Kisuu')
 
 # 4-6
-x = input('値を入れてください')
+x = int(input('値を入れてください'))
 if 10 <= x <= 20:
     print('ok')
 
 # 4-7
-x = input('値を入れてください')
+x = int(input('値を入れてください'))
 if 10 <= x <= 20:
     print('(^_-)-☆')
 elif 50 <= x <= 60:
     print('(/・ω・)/')
 
 # 4-8
-x = input('値を入れてください')
+x = int(input('値を入れてください'))
 if x > 0:
     print(x)
 else:
-    y = input('値を入れてください')
+    y = int(input('値を入れてください'))
     print(x*y)
 
