@@ -286,3 +286,289 @@ else:
     y = int(input('値を入れてください'))
     print(x*y)
 
+# 第5章
+# 5-1(1)
+num = 0
+while num < 2:
+    x = int(input("値を入れてください"))
+    print(x)
+    num = num + 1
+    continue
+
+# 5-1(2)
+num = 0
+while num < 2:
+    x = int(input("なにか値を入れてください"))
+    y = int(input("もうひとつ値を入れてください"))
+    print(x,y)
+    num = num + 1
+    continue
+
+
+# 5-1(3)
+num = 0
+while num < 2:
+    x = int(input("価格を入れてください"))
+    x = x * 1.08
+    print("税込み価格は", x,"円です")
+    num = num + 1
+    continue
+
+# 5-1 (4) --(1)について直した
+while True:
+    x = int(input("値を入れてください。0で終わります"))
+    if x == 0:
+        break
+    else:
+        print(x)
+        continue
+
+# 5-1 (5) --(1)について直した
+while True:
+    x = int(input("値を入れてください。負の数ならで終わります"))
+    if x < 0:
+        break
+    else:
+        print(x)
+        continue
+
+# 5-2 (1)
+while True:
+    x = int(input("値を入れてください。0なら終わります"))
+    if x == 0:
+        break
+    elif x%7 == 0:
+        print(x,"は7の倍数です")
+        continue
+    else:
+        print(x, "は7の倍数ではありません")
+        continue
+
+# 5-2 (2) は7を3にすればいいだけだから省略
+
+# 5-2 (3)
+while True:
+    x = int(input("値を入れてください。0なら終わります"))
+    if x == 0:
+        break
+    elif x < 0:
+        print(x,"は負の数です")
+        continue
+    else:
+        print(x, "は負の数ではありません")
+        continue
+
+# 5-3(1)
+i = 1
+while i<=10:
+    print("Hello!")
+    i = i+1
+
+# 5-3(2)
+i = 1
+while i<=20:
+    print("Hello!!")
+    i = i+1
+
+# 5-4(1)
+x = 1
+while x<=10:
+    print(x)
+    x = x+1
+
+# 5-4(2) は10を20にするだけ
+# 5-4(3)
+x = -10
+while x<=10:
+    print(x)
+    x = x+1
+
+# 5-4(4)
+x = 1
+while x <= 10:
+    if x%2 == 0:
+        print(x)
+    x = x+1
+
+# 5-4(5) --(1)であれば9この表示になる。
+
+# 5-5(1)
+for i in range(1,11):
+    print(i)
+
+for i in range(1,21):
+    print(i)
+
+for i in range(-10,11):
+    print(i)
+
+for i in range(1,11):
+    if i%2 == 0:
+        print(i)
+
+# 5-5(2)
+for i in range(10,0,-1):
+    print(i)
+
+# 5-5(3)
+for i in range(1,102):
+    if i%2 == 0:
+        print(i)
+
+# 5-6(1) --どこに入力した値を貯めていけばいいのかわからない...
+n = 0
+while n <= 10:
+    x=int(input("値を入れてください"))
+    if x == 0:
+        break
+    else:
+        print(x)
+        n = n+1
+        continue
+print(x) 
+
+# 5-6 (6)
+for i in range(10):
+    x = int(input("値を入れてください"))
+    if x == 0:
+        break
+    else:
+        print(x)
+        continue
+
+# 5-7(1) --枠線なし
+for i in range(1,10):
+    for j in range(1,10):
+        print(i*j, end=" ")
+    print(" ") 
+
+# 5-7(1) --枠線ありも作れた
+for i in range(1,10):
+    for j in range(1,10):
+        if i*j <10:
+            print(i*j, end=" |")
+        else:
+            print(i*j, end="|")
+    print(" ") 
+    for z in range(1,10):
+        print("――", end="―")
+    print(" ")
+
+# 5-7(2)
+for i in range(0,10):
+    for j in range(0,10):
+        if i+j <10:
+            print(i+j, end=" |")
+        else:
+            print(i+j, end="|")
+    print(" ") 
+    for z in range(0,10):
+        print("――", end="―")
+    print(" ")
+
+# 5-7(3)
+for i in range(1,12):
+    for j in range(1,12):
+        if i*j <10:
+            print(i*j, end="  |")
+        elif i*j < 100:
+            print(i*j, end=" |")
+        else:
+            print(i*j, end="|")
+    print(" ") 
+    for z in range(1,12):
+        print("――", end="――")
+    print(" ")
+
+# 5-8
+n=1
+for i in range(5,0,-1):
+    print(" "*n, end="")
+    print("#"*i*2)
+    n = n+1
+
+# 5-9 --whileにする必要ってなんだろう
+while True:
+    x1 = int(input("値を入れてください"))
+    x2 = int(input("値を入れてください"))
+    if x1 == x2:
+        break
+    print("(。-∀-)")
+    break
+
+# 5-10
+import random
+while True:
+    x = random.randint(1,100)
+    print(x)
+    if x == 50:
+        break
+
+# 5-11
+import random
+x = random.randint(1,100)
+while True:
+    y = int(input("値を入れてください。数当てゲームです"))
+    if x == y:
+        print("当たり！")
+        break
+    elif x > y:
+        print("この値よりも大きい値です")
+    else:
+        print("この値よりも小さい値です")
+
+# 5-12 (1)
+x = int(input("値を入れてください"))
+y = int(input("それより大きい値を入れてください"))
+for i in range(x,y+1):
+    print(i)
+
+# 5-12 (2)
+a = int(input("値を入れてください"))
+b = int(input("それより大きい値を入れてください"))
+while a<=b:
+    print(a)
+    a = a+1
+
+# 5-13 (1)
+a = int(input("値を入れてください"))
+b = int(input("値を入れてください"))
+for i in range(a):
+    print("*"*b)
+
+# 5-13 (2)
+a = int(input("値を入れてください"))
+b = int(input("値を入れてください"))
+for i in range(a):
+    for j in range(b):
+        print("*", end="")
+    print(" ")
+
+# 5-14 --横線は長すぎたため省略、縦線のみ。
+for i in range(1,10):
+    for j in range(1,10):
+        if i*j <10:
+            print(i,"×",j,"=",i*j, end=" |")
+        else:
+            print(i,"×",j,"=",i*j, end="|")
+    print(" ") 
+
+# 5-15
+for i in range(1,4):
+    for j in range(1,4):
+        for w in range(1,4):
+            if i*j*w < 10:
+                print(i,"×",j,"×",w,"=",i*j*w, end=" |")
+            else:
+                print(i,"×",j,"×",w,"=",i*j*w, end="|")
+    print(" ") 
+
+
+# 5-16
+while True:
+    x = int(input("値を入れてください。0で終了します"))
+    if x == 0:
+        break
+    else:
+        print(x)
+        print("#"*x)
