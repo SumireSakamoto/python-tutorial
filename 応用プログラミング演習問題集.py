@@ -9,21 +9,21 @@ print('''11211
 21112''')
 
 # 第2章
-# 例2-1
+# 例題2-1
 print('(33+44)*55=', (33+44)*55)
 print('2.1+4.3+6.5=', 2.1+4.3+6.5)
 print('(123+456)%78=', (123+456)%78)
 
-# 例2-2
+# 例題2-2
 x = 123*45
 print(x)
 
-# 例2-3
+# 例題2-3
 x = 9.99
 y = 50
 print(x*10, y*10)
 
-# 例2-4
+# 例題2-4
 x = 10
 y = 10
 print(x,y)  # 10,10が出る
@@ -68,39 +68,39 @@ x = 30
 print(x)
 
 # 第3章
-# 3-1(1)
+# 3-1 (1)
 x = int(input('整数を入れてください'))
 print(x)
 
-# 3-1(2)(3)はとばす
-# 3-1(4)
+# 3-1 (2)(3)はとばす
+# 3-1 (4)
 x = int(input('seisuu = ?'))
 print(x)
 
-# 3-1(5)
+# 3-1 (5)
 x = float(input('小数を入れてください'))
 print(x)
 
-# 3-2(1)
+# 3-2 (1)
 print('整数を2回入れてください。和が出ます。')
 x = int(input())
 y = int(input())
 print(x+y)
 
-# 3-2(2)
+# 3-2 (2)
 print('整数を3回入れてください。和が出ます。')
 x = int(input())
 y = int(input())
 z = int(input())
 print(x+y+z)
 
-# 3-2(3)
+# 3-2 (3)
 print('小数を2回入れてください。和が出ます。')
 x = float(input())
 y = float(input())
 print(x+y)
 
-# 3-2(4)
+# 3-2 (4)
 print('整数を2回入れてください。積が出ます。')
 x = int(input())
 y = int(input())
@@ -162,18 +162,18 @@ print('差は',abs(x-y))
 print('積は',x*y)
 
 # 第4章
-# 例4-1
+# 例題4-1
 if 0<10:
     print ('OK')
 
-# 例4-2:
+# 例題4-2:
 x = int(input('値を入れてください。ある数字と等しいか判定します'))
 if x+25000 == 3500*9:
     print('OK')
 else:
     print('Booo')
 
-# 例4-3
+# 例題4-3
 x = int(input('値を入れてください'))
 if x > 0:
     print('positive')
@@ -415,19 +415,21 @@ for i in range(1,102):
     if i%2 == 0:
         print(i)
 
-# 5-6(1) --どこに入力した値を貯めていけばいいのかわからない...
-n = 0
-while n <= 10:
-    x=int(input("値を入れてください"))
+# 5-6(1) --リストにしてみたけど合ってるのか
+y = []
+for i in range(10):
+    x = int(input("値を入れてください"))
     if x == 0:
         break
-    else:
-        print(x)
-        n = n+1
-        continue
-print(x) 
+    y.append(x)
+print(y)
 
-# 5-6 (6)
+# 5-6(2) はrangeを20にするだけ
+# 5-6(3) はif x==10: にするだけ
+# 5-6(4) はif x<0 :　にするだけ
+# 5-6(5) はif x=0 or x=1にするだけ
+
+# 5-6(6)
 for i in range(10):
     x = int(input("値を入れてください"))
     if x == 0:
@@ -572,3 +574,198 @@ while True:
     else:
         print(x)
         print("#"*x)
+
+# 5-17
+for n in range(2,101):
+    for i in range(2,n):
+        if n%i == 0:
+            break
+    else:
+        print(n)
+    n = n+1
+
+# 第6章
+# 例題6-1
+y = input("x= ")
+x = input("x= ")
+while y != x :
+    y = x
+    x = input("x= ")
+
+# 例題6-2
+m = -9999
+for i in range(10):
+    j = int(input("Please enter an integer:"))
+    if m < j :
+        m = j
+print(m)
+
+# 例題6-3
+c = 0
+for i in range(10) :
+    j = int(input("Please enter an integer:"))
+    if j > 10:
+        c += 1
+print(c)
+
+# 例題6-4
+f = 0
+for i in range(10):
+    j = int(input("Please enter an integer:"))
+    if j == 5:
+        f = 1
+if f ==1:
+    print("5はあった")
+
+# 6-1 (1)
+n = 100000
+while True:
+    x = int(input("値を入れてください"))
+    if n*2 < x:
+        break
+    else:
+        n=x
+
+# 6-1 (2)
+y = int(input("値を入れてください"))
+x = int(input("値を入れてください"))
+while y!=x:
+    if x<0:
+        y=x
+    x = int(input("値を入れてください"))
+
+# 6-1 (3)
+z = input("x =")
+y = input("x =")
+x = input("x =")
+while z != x:
+    z = y
+    y = x
+    x = int(input("x ="))
+
+# 6-2 (1)
+m = 10000
+for i in range(10):
+    i = int(input("値を入れてください"))
+    if m>i :
+        m = i
+print(m)
+
+# 6-2 (2)
+m = 0
+for i in range(5):
+    x = int(input("値を入れてください"))
+    if x<=10 and m<x:
+        m=x
+print("10以下で最大の値は",m,"でした")
+
+# 6-3 (1)
+c = 0
+for i in range(10):
+    x = int(input("値を入れてください"))
+    if x<0 :
+        c += 1
+print(c,"回負の数が入力されました")
+
+# 6-3 (2)
+c = 0
+for i in range(10):
+    x = int(input("値を入れてください"))
+    if x%2 == 0:
+        c += 1
+print(c,"回偶数が入力されました。")
+
+# 6-4 (1)
+f = 0
+for i in range(10):
+    x = int(input("値を入れてください"))
+    if x == 5:
+        f = 1
+if f == 0:
+    print("5がありません")
+
+# 6-4 (2)
+f = 0
+for i in range(10):
+    x = int(input("値を入れてください"))
+    if x<0 :
+        f = 1
+if f == 1:
+    print("負の数がありました")
+else:
+    print("負の数はありませんでした")
+
+# 6-5
+y = 0
+for i in range(10):
+    x = int(input("値を入れてください"))
+    y += x
+print(y)
+
+# 6-6 --リスト型にしたけど合ってるのかな
+y = []
+z = 0
+while True:
+    x = int(input("値を入れてください"))
+    if x == 0:
+        y.append(0)
+        print(y)
+        break
+    else:
+        z += x
+        y.append(x)
+        y.append(z)
+
+# 6-7
+c0 = 0
+c1 = 0
+for i in range(10):
+    x = int(input("値を入れてください"))
+    if x == 0 :
+        c0 += 1
+    elif x == 1 :
+        c1 += 1
+if c0 > c1:
+    print("0の方が1より多く入力されました")
+elif c0 < c1:
+    print("1の方が0より多く入力されました")
+
+# 6-8
+f = 0
+x = int(input("素数判定です。値を入れてください"))
+for i in range(2,x):
+    if x%i == 0:
+        f = 1
+if f == 1:
+    print(x,"は素数ではありません")
+else:
+    print(x,"は素数です")
+
+# 6-9
+n = int(input("素数判定です。値を入れてください"))
+for j in range(2,n):
+    f = 0
+    for i in range(2,j):
+        if j%i == 0:
+            f = 1
+    if f == 0:
+        print(j)
+
+# 6-10
+import random
+c = 0
+for i in range(100):
+    x = random.randint(1,100)
+    if x <= 30:
+        c += 1
+print("乱数で30以下の数字が",c,"回入力されました")
+
+# 6-11
+c = 0
+y = int(input("値を入れてください"))
+for i in range(10):
+    x = int(input("値を入れてください"))
+    if x == y :
+        c += 1
+    y = x
+print(c,"回連続して前回と同じ数が入力されました")
